@@ -5,8 +5,8 @@ from playwright.sync_api import sync_playwright
 
 
 def screenshot_url(page: Page, url: str, screenshot_path: str):
+    print("Screenshotting: " + url + " to " + screenshot_path)
     page.goto(url)
-    print(screenshot_path)
     page.screenshot(path=screenshot_path, full_page=True)
 
 
