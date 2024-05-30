@@ -14,10 +14,9 @@ def screenshot_url(page: Page, url: str, screenshot_path: str):
 
 
 def read_sites():
-    sites = []
     with open('sites.txt') as f:
-        sites = f.readlines()
-    return sites
+        sites = f.read().splitlines()
+        return sites
 
 
 def get_hostname(url: str):
